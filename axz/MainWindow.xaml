@@ -1,0 +1,40 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Больница"/>
+        <TextBox x:Name="textBoxHospital" Grid.Row="0" Grid.Column="1"/>
+
+        <Label Grid.Row="1" Grid.Column="0" Content="ФИО врача"/>
+        <TextBox x:Name="textBoxDoctor" Grid.Row="1" Grid.Column="1"/>
+
+        <Label Grid.Row="2" Grid.Column="0" Content="ФИО пациента"/>
+        <TextBox x:Name="textBoxPatient" Grid.Row="2" Grid.Column="1"/>
+
+        <Label Grid.Row="3" Grid.Column="0" Content="Номер в очереди"/>
+        <TextBox x:Name="textBoxQueue" Grid.Row="3" Grid.Column="1"/>
+
+        <Button x:Name="buttonValidate" Grid.Row="6" Content="Проверить" Grid.ColumnSpan="2" Margin="97,40,10,-60" Click="buttonValidate_Click"/>
+
+    </Grid>
+</Window>
